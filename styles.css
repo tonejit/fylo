@@ -1,0 +1,217 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+span{
+	font-family: 'Castoro', serif;
+}
+p{
+	font-family: 'Quicksand', sans-serif;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* styling begins here */
+body{
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	color: #FDFCFF;
+	background-color: #0C122C;
+	background-image: url(images/bg-desktop.png);
+	background-repeat: no-repeat;
+	background-position: 0px 320px;
+	background-size: 1365px 330px;
+	overflow: hidden;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	width: 770px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+.left{
+	padding: 30px 50px 30px 30px;
+	background-color: #1E2C69;
+	width: 200px;
+	border-radius: 8px;
+	border-top-right-radius: 100px;
+}
+.left >img{
+	margin-bottom: 20px;
+}
+.icons{
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+}
+.icon{
+	background-color: #0C112D;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+.right{
+	position: relative;
+	height: 120px;
+	width: 470px;
+	background-color: #1E2C69;
+	margin-top: 45px;
+	padding: 30px;
+	box-sizing: border-box;
+	border-radius: 8px;
+}
+.right > p{
+	font-size: 12px;
+	font-weight: 300;
+}
+.bar{
+	width: 95%;
+	height: 8px;
+	margin: 12px 0 5px 2px;
+	border-radius: 10px;
+	background-color:#151E4A;
+	border: 1px solid #151E4A;
+}
+#gradient{
+	position: relative;
+	width: 80%;
+	height: 8px;
+	background-color: pink;
+	background: linear-gradient(45deg, #FFA099,#FB4E91);
+	border-radius: 10px;
+}
+#circle{
+	position: absolute;
+	top: 1px;
+	left: 97%;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #FAFAF9;
+}
+.foottext{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.foottext p{
+	font-size: 8px;
+	font-weight: 800;
+	letter-spacing: 0.1rem;
+}
+
+.square{
+	width: 120px;
+	height: 50px;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+	background-color: #FDFCFF;
+	color: black;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.square p{
+	font-size: 10px;
+	color: #0f0f0f;
+	margin-left: 5px;
+	font-weight: 700;
+}
+.square span{
+	font-size: 25px;
+	font-weight: 800;
+	color: #353434;
+	letter-spacing: 0.1rem;
+}
+.remain{
+	position: absolute;
+	left: 312px;
+	top: -36px;
+}
+.triangle {
+	width: 0;
+	height: 0;
+	border-top: 20px solid #FDFCFF;
+	border-left: 20px solid transparent;
+	position: absolute;
+	left: 100px;
+	top: 46px;
+}
+
+@media (max-width: 800px){
+	body{
+		background-image: url(images/bg-mobile.png);
+		background-repeat: no-repeat;
+		background-position: 0px 0px;
+		background-size: 100vw 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;	
+	}
+	.right{
+		width: 280px;
+		margin-top: 20px;
+	}
+	.triangle{
+		display: none;
+	}
+	.square{
+		border-bottom-right-radius: 10px;
+		position: absolute;
+		top: 140px;
+		right: 120px;
+	}
+}
